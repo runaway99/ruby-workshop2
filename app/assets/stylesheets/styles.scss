@@ -1,0 +1,102 @@
+:root {
+  --height: 40px;
+  --button-radius: 5px;
+
+  --accent: #3f51b5;
+  --main: white;
+  --text: #333;
+}
+
+.button {
+  background-color: orange;
+  text-decoration: none;
+  padding: 0 20px;
+  border-radius: 5px;
+  color: blue;
+  line-height: var(--height);
+  height: var(--height);
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color .3s ease-in-out;
+}
+
+.button:visited {
+  color: blue;
+}
+
+.button:hover {
+  background-color: yellow;
+
+}
+
+.button:active {
+  //transform: translateY(2px);
+}
+
+.button--secondary {
+  
+}
+
+.heading {
+  /* wpisz odpowiednie style */
+}
+
+.panel {
+  width: fit-content;
+  width: -moz-fit-content;
+  background-color: pink;
+  padding: 1em;
+  border-radius: 5px;
+
+}
+
+.panel + .panel {
+  margin-top:20px;
+}
+
+.panel__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction:column;
+}
+
+.panel__item + .panel__item {
+  margin-top: 20px;
+
+}
+
+.panel__title {
+  margin: 0;
+}
+
+.panel__text {
+  margin: 10px 0 0 0;
+}
+
+.panel__actions {
+  /* wpisz odpowiednie style */
+}
+
+.panel__action + .panel__action {
+  /* wpisz odpowiednie style */
+}
+
+@media (min-width: 820px) {
+  .panel__list,
+  .panel__actions {
+     flex-direction: row;
+  }
+
+  .panel__item + .panel__item {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+
+  .panel__action + .panel__action {
+   /* wpisz odpowiednie style */
+  }
+}

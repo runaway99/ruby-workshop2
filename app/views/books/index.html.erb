@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p
+
+<section>
+  <h1 class='heading'>Books</h1>
+
+  <% @books.each do |book| %>
+    <article class='panel'>
+        <ul class='panel__list'>
+          <li class='panel__item'>
+            <h3 class='panel__title'>Title</h3>
+            <p class='panel__text'><%= book.title %></p>
+          </li>
+
+          <li class='panel__item'>
+            <h3 class='panel__title'>Isbn</h3>
+            <p class='panel__text'><%= book.ISBN %></p>
+          </li>
+
+          <li class='panel__item'>
+            <h3 class='panel__title'>Publication date</h3>
+            <p class='panel__text'><%= book.publication_date %></p>
+          </li>
+
+          <li class='panel__item'>
+            <h3 class='panel__title'>Author</h3>
+            <p class='panel__text'><%= book.author %></p>
+          </li>
+        </ul>
+
+        <div class='panel__actions'>
+          <%= link_to 'Show', book, class: 'button button--secondary panel__action' %>
+          <%= link_to 'Edit', edit_book_path(book), class: 'button button--secondary panel__action' %>
+          <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button button--secondary panel__action' %>
+        </div>
+    </article>
+  <% end %>
+</section>
+
+<br>
+
+<%= link_to 'New Book', new_book_path, class: 'button' %>
